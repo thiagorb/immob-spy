@@ -1,0 +1,44 @@
+{
+    "waitTime": 30000,
+    "notifiers": [
+        {
+            "active": true,
+            "module": "./notifiers/mailgun",
+            "apiKey": <API-KEY>,
+            "domain": <DOMAIN>,
+            "sender": <SENDER>,
+            "recipients": <RECIPIENTS>,
+            "subject": "New items"
+        },
+        {
+            "active": true,
+            "module": "./notifiers/sendmail",
+            "sender": <SENDER>,
+            "recipients": <RECIPIENTS>,
+            "subject": "New items"
+        },
+        {
+            "active": true,
+            "module": "./notifiers/slack",
+            "hook": <HOOK-URL>,
+            "text": "New items"
+        }
+    ],
+    "trackers": [
+        {
+            "active": true,
+            "module": "./trackers/immobilienscout",
+            "urls": <FILTER-URLS>
+        },
+        {
+            "active": false,
+            "module": "./trackers/ebaykleinanzeige",
+            "urls": <FILTER-URLS>
+        },
+        {
+            "active": true,
+            "module": "./trackers/wg-gesucht",
+            "urls": <FILTER-URLS>
+        }
+    ]
+}
