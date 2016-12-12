@@ -35,7 +35,7 @@ var saveNewItems = function (trackersNewItems, alreadySeen) {
         trackerNewItems.items.forEach(item => newItems[item.id] = true);
         alreadySeen[trackerNewItems.tracker.id] = newItems;
     });
-    fs.writeFileSync('alreadySeen.json', JSON.stringify(alreadySeen));
+    fs.writeFileSync('alreadySeen.json', JSON.stringify(alreadySeen, null, 4));
 };
 
 var fetchItems = tracker => 
