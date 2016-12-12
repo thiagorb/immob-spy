@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = config => ({
     id: 'wg-gesucht',
     name: 'WG-Gesucht',
     adapter: function ($) {
@@ -15,4 +15,4 @@ module.exports = {
         });
         return items;
     }
-};
+});

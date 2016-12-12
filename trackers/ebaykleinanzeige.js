@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = config => ({
     id: 'ebaykleinanzeige',
     name: 'eBay Kleinanzeige',
     adapter: function ($) {
@@ -13,4 +13,4 @@ module.exports = {
         });
         return items;
     }
-};
+});

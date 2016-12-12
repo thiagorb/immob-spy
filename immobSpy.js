@@ -11,7 +11,7 @@ var notifiers = config.notifiers
 var trackers = config.trackers
     .filter(trackerConfig => trackerConfig.active)
     .map(trackerConfig => {
-        var tracker = require(trackerConfig.module);
+        var tracker = require(trackerConfig.module)(trackerConfig);
         return {
             id: tracker.id,
             name: tracker.name,
